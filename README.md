@@ -2,8 +2,6 @@
 
 React + Express + MongoDB app for on-call **incidents** (not a generic bug tracker). Commanders open incidents, set severity, and assign people using workload counts. Everyone can watch an append-only **timeline**. Reassignment requires a **handoff summary**. Resolve requires a written **what / what we did / outcome**. Search includes resolved incidents.
 
-Beginner map of files: [FILE_GUIDE.md](./FILE_GUIDE.md).
-
 ## Demo logins (seeded on first start)
 All **commanders** use `command123`. All **engineers** use `engineer123`.
 
