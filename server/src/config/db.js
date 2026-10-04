@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { MongoMemoryServer } from "mongodb-memory-server";
 
 let memoryServer;
 
@@ -12,9 +11,10 @@ export async function connectDb() {
     return;
   }
 
+  const { MongoMemoryServer } = await import("mongodb-memory-server");
   memoryServer = await MongoMemoryServer.create();
   await mongoose.connect(memoryServer.getUri());
-  console.log("MongoDB connected (in-memory — set MONGODB_URI to use a real database)");
+  console.log("MongoDB connected (in-memory, set MONGODB_URI to use a real database)");
 }
 
 export async function disconnectDb() {
